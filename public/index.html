@@ -15,7 +15,7 @@
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
 
-    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="assets/css/style.css" type="text/css" rel="stylesheet" />
   </head>
 
   <body>
@@ -32,7 +32,7 @@
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>
-        <a class="get-started-btn scrollto" href="#contactus">Contact Us</a>
+        <a class="get-started-btn scrollto" href="#contact">Contact Us</a>
       </div>
     </header>
 
@@ -144,12 +144,9 @@
       <section id="cta" class="cta">
         <div class="container" data-aos="zoom-in">
           <div class="text-center">
-            <h3>Call To Action</h3>
-            <p>
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-              non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <a class="cta-btn" href="#">Call To Action</a>
+            <h3>Request a Quote</h3>
+            <p>Have a question or need a quote? Please contact us today. We look forward to hearing from you!</p>
+            <a class="cta-btn" href="#contact">Contact Us</a>
           </div>
         </div>
       </section>
@@ -162,21 +159,58 @@
             <p>Contact Us</p>
           </div>
 
-          <div class="row">
+          <div class="row mt-5">
             <div class="col-lg-4">
               <div class="info">
                 <div class="address">
-                  <i class="icofont-google-map"></i>
+                  <i class="bi bi-geo-alt"></i>
                   <h4>Location:</h4>
                   <p>Brook Ridge Consulting, Inc. 1000 NW 10th Street, Suite 200 Gainesville, FL 32601</p>
                 </div>
 
                 <div class="email">
-                  <i class="icofont-envelope"></i>
+                  <i class="bi bi-envelope"></i>
                   <h4>Email:</h4>
-                  <p>Test</p>
+                  <p>bsevret@brookridgeenv.com</p>
+                </div>
+
+                <div class="phone">
+                  <i class="bi bi-phone"></i>
+                  <h4>Call:</h4>
+                  <p>(352) 483-6203</p>
                 </div>
               </div>
+            </div>
+            <div class="col-lg-8 mt-5 mt-lg-0">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <label for="firstname">First Name</label>
+                  <input type="text" name="firstname" class="form-control" id="firstname" />
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <label for="lastname">Last Name</label>
+                  <input type="text" class="form-control" name="lastname" id="lastname" />
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-md-6 form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" name="email" class="form-control" id="email" />
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" class="form-control" name="phone" id="phone" />
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <label for="name">Subject</label>
+                <input type="text" class="form-control" name="subject" id="subject" />
+              </div>
+              <div class="form-group mt-3">
+                <label for="message">Message</label>
+                <textarea class="form-control" name="message" id="message" rows="6" placeholder="How can we help you?"></textarea>
+              </div>
+              <button class="btn btn-primary" onsubmit="return false" onclick="sendMessage();">Send Message</button>
             </div>
           </div>
         </div>
@@ -202,11 +236,11 @@
             <div class="col-lg-4 col-md-6 footer-links">
               <h4>Our Services</h4>
               <ul>
-                <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="#hero">Home</a></li>
-                <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="#about">About</a></li>
-                <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="#services">Services</a></li>
-                <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="#portfolio">Portfolio</a></li>
-                <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="#contactus">Contact Us</a></li>
+                <li><i class="bi bi-chevron-compact-right"></i> <a class="scrollto" href="#hero">Home</a></li>
+                <li><i class="bi bi-chevron-compact-right"></i> <a class="scrollto" href="#about">About</a></li>
+                <li><i class="bi bi-chevron-compact-right"></i> <a class="scrollto" href="#services">Services</a></li>
+                <li><i class="bi bi-chevron-compact-right"></i> <a class="scrollto" href="#portfolio">Portfolio</a></li>
+                <li><i class="bi bi-chevron-compact-right"></i> <a class="scrollto" href="#contact">Contact Us</a></li>
               </ul>
             </div>
 
@@ -232,5 +266,6 @@
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/contact.js"></script>
   </body>
 </html>
