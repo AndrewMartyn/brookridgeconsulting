@@ -1,4 +1,5 @@
 require("dotenv").config();
+import sendMail from "./nodemailer.js";
 
 const sendMessage = () => {
   const firstName = document.getElementById("firstname").value;
@@ -11,7 +12,16 @@ const sendMessage = () => {
   const error = "";
 
   if (firstName != "" && lastName != "" && emailAddress != "" && phoneNumber != "" && subject != "" && message != "") {
-    // Send email
+    const mailOptions = {
+      from: emailAddress,
+      to: process.env.EMAIL,
+      subject: subject,
+      text: `Name: ${firstName} ${lastName}
+      Email: ${emailAddress}
+      Phone: ${phoneNumber}
+      Message: ${message}`,
+    };
+    sendMail(mailOptions);
   } else {
     error = "Please fill out all fields.";
   }
