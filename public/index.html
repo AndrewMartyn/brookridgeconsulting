@@ -14,8 +14,9 @@
     <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
-
-    <link href="assets/css/style.css" type="text/css" rel="stylesheet" />
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -79,6 +80,86 @@
         </div>
       </section>
       <!-- End About Section -->
+
+      <section id="testimonials" class="testimonials">
+        <div class="container" data-aos="zoom-in">
+          <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <h3>Saul Goodman</h3>
+                  <h4>Ceo &amp; Founder</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id,
+                    aliquam eget nibh et. Maecen aliquam, risus at semper.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+              <!-- End testimonial item -->
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <h3>Sara Wilsson</h3>
+                  <h4>Designer</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit
+                    sunt aliqua noster fugiat irure amet legam anim culpa.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+              <!-- End testimonial item -->
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <h3>Jena Karlis</h3>
+                  <h4>Store Owner</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis
+                    noster aute amet eram fore quis sint minim.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+              <!-- End testimonial item -->
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <h3>Matt Brandon</h3>
+                  <h4>Freelancer</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam
+                    ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+              <!-- End testimonial item -->
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <h3>John Larson</h3>
+                  <h4>Entrepreneur</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla
+                    illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+              <!-- End testimonial item -->
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <!-- End Testimonials Section -->
 
       <!-- ======= Services Section ======= -->
       <section id="services" class="services">
@@ -146,7 +227,7 @@
           <div class="text-center">
             <h3>Request a Quote</h3>
             <p>Have a question or need a quote? Please contact us today. We look forward to hearing from you!</p>
-            <a class="cta-btn" href="#contact">Contact Us</a>
+            <a class="cta-btn scrollto" href="#contact">Contact Us</a>
           </div>
         </div>
       </section>
@@ -164,8 +245,8 @@
               <div class="info">
                 <div class="address">
                   <i class="bi bi-geo-alt"></i>
-                  <h4>Location:</h4>
-                  <p>Brook Ridge Consulting, Inc. 1000 NW 10th Street, Suite 200 Gainesville, FL 32601</p>
+                  <h4>Locations:</h4>
+                  <p>Florida, New Jersey, New York</p>
                 </div>
 
                 <div class="email">
@@ -206,7 +287,7 @@
                 <label for="name">Subject</label>
                 <input type="text" class="form-control" name="subject" id="subject" />
               </div>
-              <div class="form-group mt-3">
+              <div class="form-group mt-3 mb-3">
                 <label for="message">Message</label>
                 <textarea class="form-control" name="message" id="message" rows="6" placeholder="How can we help you?"></textarea>
               </div>
@@ -229,12 +310,13 @@
                 <p>
                   <strong>Phone:</strong> (352) 483-6203<br />
                   <strong>Email:</strong> bsevret@brookridgeenv.com<br />
+                  <strong>Locations:</strong> Florida, New Jersey, New York<br />
                 </p>
               </div>
             </div>
 
             <div class="col-lg-4 col-md-6 footer-links">
-              <h4>Our Services</h4>
+              <h4>Links</h4>
               <ul>
                 <li><i class="bi bi-chevron-compact-right"></i> <a class="scrollto" href="#hero">Home</a></li>
                 <li><i class="bi bi-chevron-compact-right"></i> <a class="scrollto" href="#about">About</a></li>
@@ -264,6 +346,7 @@
     <!-- Vendor JS Files-->
     <script src="assets/vendor/aos/aos.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
     <script src="assets/js/main.js"></script>
     <script src="assets/js/contact.js"></script>
