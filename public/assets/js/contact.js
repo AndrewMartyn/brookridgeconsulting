@@ -1,5 +1,5 @@
 require("dotenv").config();
-import sendMail from "./nodemailer.js";
+import { sendMail } from "./nodemailer.js";
 
 const sendMessage = () => {
   const firstName = document.getElementById("firstname").value;
@@ -28,3 +28,5 @@ const sendMessage = () => {
 
   console.log(firstName, lastName, emailAddress, phoneNumber, subject, message);
 };
+
+module.exports = sendMessage;

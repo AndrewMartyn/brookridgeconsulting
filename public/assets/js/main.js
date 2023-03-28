@@ -161,6 +161,27 @@
   });
 
   /**
+   * Portfolio slider
+   */
+  new Swiper(".portfolio-swiper", {
+    slidesPerView: 1,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    spaceBetween: 30,
+    pagination: {
+      el: ".portfolio-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+  /**
    * Animation on scroll
    */
   window.addEventListener("load", () => {
