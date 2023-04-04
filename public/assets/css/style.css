@@ -1,10 +1,3 @@
-/**
-* Template Name: Gp - v4.10.0
-* Template URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -30,42 +23,6 @@ h4,
 h5,
 h6 {
   font-family: "Raleway", sans-serif;
-}
-
-/*--------------------------------------------------------------
-  # Back to top button
-  --------------------------------------------------------------*/
-.back-to-top {
-  position: fixed;
-  visibility: hidden;
-  opacity: 0;
-  right: 15px;
-  bottom: 15px;
-  z-index: 996;
-  background: #4d6fea;
-  width: 40px;
-  height: 40px;
-  border-radius: 4px;
-  transition: all 0.4s;
-}
-
-.back-to-top i {
-  font-size: 28px;
-  color: #151515;
-  line-height: 0;
-}
-
-.back-to-top:hover {
-  background: #151515;
-}
-
-.back-to-top:hover i {
-  color: #4d6fea;
-}
-
-.back-to-top.active {
-  visibility: visible;
-  opacity: 1;
 }
 
 /*--------------------------------------------------------------
@@ -327,16 +284,15 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/hero-bg.jpg") top center;
-  filter: grayscale(70%);
-  background-size: cover;
   position: relative;
 }
 
 #hero:before {
   content: "";
-  background: rgba(0, 0, 0, 0.6);
+  background: url("../img/hero-bg.jpg") top center;
+  background-size: cover;
   position: absolute;
+  filter: brightness(30%) grayscale(70%);
   bottom: 0;
   top: 0;
   left: 0;
@@ -346,6 +302,16 @@ h6 {
 #hero .container {
   position: relative;
   text-align: center;
+  /* margin-top: -150px; */
+}
+
+#hero .hero-img {
+  max-width: 100%;
+  height: 300px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  display: block;
+  position: relative;
 }
 
 #hero h1 {
@@ -356,10 +322,6 @@ h6 {
   color: #fff;
   font-family: "Poppins", sans-serif;
   white-space: nowrap;
-}
-
-#hero h1 span {
-  color: #4d6fea;
 }
 
 #hero h2 {
