@@ -18,12 +18,13 @@ app.use(express.json());
 // Configure static serving of files
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-app.use(express.static(path.join(__dirname, "public")));
+// app.use(express.static(path.join(__dirname, "public")));
 
 // main endpoint to serve files
 app.get("/", (request, response) => {
   response.setHeader("Content-Type", "text/html");
-  response.sendFile("index.html", { root: path.join(__dirname, "public") });
+  // response.sendFile("index.html", { root: path.join(__dirname, "public") });
+  response.sendFile("index.html");
 });
 
 // contact endpoint
