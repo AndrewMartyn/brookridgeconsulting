@@ -29,7 +29,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 // main endpoint to serve files
 app.get('/', (request, response) => {
   response.setHeader('Content-Type', 'text/html');
-  response.sendFile('index.html');
+  response.sendFile('index.html', { root: 'public' });
 });
 
 // contact endpoint
