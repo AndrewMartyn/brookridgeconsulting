@@ -1,26 +1,34 @@
-const dotenv = require('dotenv').config();
+import dotenv from 'dotenv';
+dotenv.config();
 
-const express = require('express');
-const path = require('path');
-const sgMail = require('@sendgrid/mail');
-const { fileURLToPath } = require('url');
-const { error } = require('console');
+import express from 'express';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import sgMail from '@sendgrid/mail';
+import { error } from 'console';
 const app = express();
 
 const PORT = process.env.PORT;
 
 // Configure sendgrid
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
+app.use((req, res, next) => {
+  console.log(`Incoming request for ${req.originalUrl}`);
+  next();
+});
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Configure static serving of files
-app.use(express.static('public'));
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+app.use(express.static(path.join(__dirname, '/public')));
 
 // main endpoint to serve files
 app.get('/', (request, response) => {
   response.setHeader('Content-Type', 'text/html');
-  response.sendFile('index.html', { root: path.join(__dirname, 'public') });
   response.sendFile('index.html');
 });
 

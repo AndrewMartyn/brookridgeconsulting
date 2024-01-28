@@ -3,6 +3,7 @@
   "description": "Brook Ridge Consulting Website",
   "name": "brookridgeconsulting",
   "main": "app.js",
+  "type": "module",
   "scripts": {
     "start": "node index.js",
     "build": "vercel --prod --token=lYYZo7DjWQAgdCboOXqBIP0c"
