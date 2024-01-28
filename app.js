@@ -1,11 +1,11 @@
-import dotenv from "dotenv";
+import dotenv from 'dotenv';
 dotenv.config();
 
-import express from "express";
-import path from "path";
-import sgMail from "@sendgrid/mail";
-import { fileURLToPath } from "url";
-import { error } from "console";
+import express from 'express';
+import path from 'path';
+import sgMail from '@sendgrid/mail';
+import { fileURLToPath } from 'url';
+import { error } from 'console';
 const app = express();
 
 const PORT = process.env.PORT;
@@ -18,22 +18,22 @@ app.use(express.json());
 // Configure static serving of files
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-// app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // main endpoint to serve files
-app.get("/", (request, response) => {
-  response.setHeader("Content-Type", "text/html");
-  // response.sendFile("index.html", { root: path.join(__dirname, "public") });
-  response.sendFile("index.html");
+app.get('/', (request, response) => {
+  response.setHeader('Content-Type', 'text/html');
+  response.sendFile('index.html', { root: path.join(__dirname, 'public') });
+  response.sendFile('index.html');
 });
 
 // contact endpoint
-app.post("/contact", (req, res) => {
+app.post('/contact', (req, res) => {
   const { firstname, lastname, email, phone, message } = req.body;
   const msg = {
     to: process.env.SENDGRID_RECIPIENT,
     from: process.env.SENDGRID_VERIFIED_SENDER,
-    subject: "Message from BRC Contact Form!",
+    subject: 'Message from BRC Contact Form!',
     text: `Message from ${firstname} ${lastname}\nPhone number: ${phone}\nEmail: ${email}\nMessage:\n${message}`,
   };
   try {
@@ -41,12 +41,12 @@ app.post("/contact", (req, res) => {
       sgMail.send(msg);
       console.log(msg);
     } else {
-      throw error("invalid message");
+      throw error('invalid message');
     }
-    res.redirect("/");
+    res.redirect('/');
   } catch (error) {
     console.log(msg);
-    res.redirect("/");
+    res.redirect('/');
   }
 });
 
