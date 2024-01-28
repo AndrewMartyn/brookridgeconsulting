@@ -15,9 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Configure static serving of files
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('public'));
 
 // main endpoint to serve files
 app.get('/', (request, response) => {
