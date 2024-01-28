@@ -16,6 +16,5 @@
       "src": "/.*",
       "dest": "./index.js"
     }
-  ],
-  "outputDirectory": "public"
+  ]
 }
