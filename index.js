@@ -1,11 +1,10 @@
-import dotenv from 'dotenv';
-dotenv.config();
+const dotenv = require('dotenv').config();
 
-import express from 'express';
-import path from 'path';
-import sgMail from '@sendgrid/mail';
-import { fileURLToPath } from 'url';
-import { error } from 'console';
+const express = require('express');
+const path = require('path');
+const sgMail = require('@sendgrid/mail');
+const { fileURLToPath } = require('url');
+const { error } = require('console');
 const app = express();
 
 const PORT = process.env.PORT;

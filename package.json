@@ -1,11 +1,16 @@
 {
-  "type": "module",
+  "version": "1.0.0",
+  "description": "Brook Ridge Consulting Website",
+  "name": "brookridgeconsulting",
+  "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node index.js",
+    "build": "now --prod"
   },
   "dependencies": {
     "@sendgrid/mail": "^8.1.0",
     "dotenv": "^16.0.3",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "now": "^21.0.1"
   }
 }
